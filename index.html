@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moses Achi - Senior Software Engineer</title>
+    <meta name="description" content="Senior Software Engineer with 12+ years of experience in fintech, AI trading, and enterprise SaaS">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { Mail, Linkedin, Github, ExternalLink, MapPin, Calendar, Award, Users, Code, Database, Cloud, Cpu } = lucideReact;
+
+        function PortfolioPage() {
+            const [activeSection, setActiveSection] = useState("home");
+
+            const projects = [
+                {
+                    title: "Distributed AI Trading Engine",
+                    description: "Built a high-frequency trading engine using Python, TensorFlow, and Kafka that executes trades with sub-50ms latency, integrates adaptive risk models, and sustains millions of transactions daily with minimal downtime.",
+                    technologies: ["Python", "TensorFlow", "Apache Kafka", "Redis", "AWS"],
+                    liveUrl: "./trading-engine.html",
+                    githubUrl: "https://github.com/mosesachizz/trading-engine-demo"
+                },
+                {
+                    title: "Cloud-Native E-Learning SaaS", 
+                    description: "Architected a Kubernetes-based multi-tenant learning platform on GCP serving 100k+ users, with autoscaling, PostgreSQL/Redis data management, and personalized analytics to significantly boost learner engagement.",
+                    technologies: ["React", "Node.js", "Kubernetes", "PostgreSQL", "GCP"],
+                    liveUrl: "./elearning-saas.html",
+                    githubUrl: "https://github.com/mosesachizz/elearning-saas-demo"
+                }
+            ];
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800">
+                    {/* Your complete portfolio content here */}
+                    <h1 className="text-6xl font-bold text-center pt-32">Moses Achi</h1>
+                    <p className="text-xl text-center mt-4">Senior Software Engineer</p>
+                    
+                    <section className="py-20 px-6">
+                        <div className="max-w-6xl mx-auto">
+                            <h2 className="text-3xl font-bold text-center mb-12">Key Projects</h2>
+                            <div className="grid md:grid-cols-2 gap-8">
+                                {projects.map((project, index) => (
+                                    <div key={index} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
+                                        <div className="p-8">
+                                            <h3 className="text-xl font-bold text-slate-800 mb-3">{project.title}</h3>
+                                            <p className="text-slate-600 leading-relaxed mb-4">{project.description}</p>
+                                            <div className="flex items-center space-x-4">
+                                                <a href={project.liveUrl} className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                                    Live Demo
+                                                    <ExternalLink size={16} className="ml-2" />
+                                                </a>
+                                                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
+                                                    GitHub
+                                                    <Github size={16} className="ml-2" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<PortfolioPage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
