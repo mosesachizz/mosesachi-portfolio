@@ -7,419 +7,223 @@
     <meta name="description" content="Senior Software Engineer with 12+ years of experience in fintech, AI trading, and enterprise SaaS">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .loading { display: block; }
-        .loaded { display: none; }
-        body.react-loaded .loading { display: none; }
-        body.react-loaded .loaded { display: block; }
-        
-        .gradient-text {
-            background: linear-gradient(to right, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+        html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
-    <!-- Loading fallback -->
-    <div class="loading">
-        <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800">
-            <!-- Navigation -->
-            <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-                <div class="max-w-6xl mx-auto px-6 py-4">
-                    <div class="flex items-center justify-between">
-                        <div class="font-bold text-xl text-slate-800">Moses Achi</div>
-                        <div class="hidden md:flex space-x-8">
-                            <a href="#home" class="text-blue-600 font-semibold">Home</a>
-                            <a href="#about" class="text-slate-600 hover:text-blue-600">About</a>
-                            <a href="#experience" class="text-slate-600 hover:text-blue-600">Experience</a>
-                            <a href="#skills" class="text-slate-600 hover:text-blue-600">Skills</a>
-                            <a href="#projects" class="text-slate-600 hover:text-blue-600">Projects</a>
-                            <a href="#education" class="text-slate-600 hover:text-blue-600">Education</a>
-                            <a href="#contact" class="text-slate-600 hover:text-blue-600">Contact</a>
+    <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 text-slate-800">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+            <div class="max-w-6xl mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <div class="font-bold text-xl text-slate-800">Moses Achi</div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#home" class="text-blue-600 font-semibold">Home</a>
+                        <a href="#about" class="text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                        <a href="#experience" class="text-slate-600 hover:text-blue-600 transition-colors">Experience</a>
+                        <a href="#skills" class="text-slate-600 hover:text-blue-600 transition-colors">Skills</a>
+                        <a href="#projects" class="text-slate-600 hover:text-blue-600 transition-colors">Projects</a>
+                        <a href="#education" class="text-slate-600 hover:text-blue-600 transition-colors">Education</a>
+                        <a href="#contact" class="text-slate-600 hover:text-blue-600 transition-colors">Contact</a>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="mailto:mosesachi.me@gmail.com" class="p-2 text-slate-600 hover:text-blue-600 transition-colors">✉️</a>
+                        <a href="https://linkedin.com/in/mosesachi" target="_blank" class="p-2 text-slate-600 hover:text-blue-600 transition-colors">💼</a>
+                        <a href="https://github.com/mosesachizz" target="_blank" class="p-2 text-slate-600 hover:text-blue-600 transition-colors">💻</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
+                        MA
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 text-slate-800">Moses Achi</h1>
+                    <p class="text-xl md:text-2xl text-slate-600 mb-8">Senior Software Engineer</p>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                        Senior Software Engineer with 12+ years of experience designing resilient systems across fintech, AI trading, and enterprise SaaS. 
+                        Skilled at applying systems thinking to architect cloud-native platforms, optimize distributed pipelines, and integrate AI into mission-critical products.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#projects" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold">
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 bg-white">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">About Me</h2>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                            I'm a passionate software engineer who thrives on solving complex problems and building scalable solutions. 
+                            With over a decade of experience in the industry, I've had the privilege of working with cutting-edge technologies 
+                            and contributing to products that impact millions of users.
+                        </p>
+                        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                            My expertise spans across cloud architecture, AI/ML systems, and high-performance trading platforms. 
+                            I believe in writing clean, maintainable code and fostering collaborative engineering cultures that prioritize both innovation and reliability.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center text-slate-600">📍 Global Remote</div>
+                            <div class="flex items-center text-slate-600">📅 12+ Years Experience</div>
+                            <div class="flex items-center text-slate-600">🏆 AWS Certified</div>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-6 bg-blue-50 rounded-lg">
+                            <div class="text-3xl mb-3">💻</div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Clean Code</h3>
+                            <p class="text-sm text-slate-600">Maintainable, scalable architecture</p>
+                        </div>
+                        <div class="text-center p-6 bg-green-50 rounded-lg">
+                            <div class="text-3xl mb-3">🗄️</div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Data Systems</h3>
+                            <p class="text-sm text-slate-600">High-performance databases</p>
+                        </div>
+                        <div class="text-center p-6 bg-purple-50 rounded-lg">
+                            <div class="text-3xl mb-3">☁️</div>
+                            <h3 class="font-semibold text-slate-800 mb-2">Cloud Native</h3>
+                            <p class="text-sm text-slate-600">Modern infrastructure</p>
+                        </div>
+                        <div class="text-center p-6 bg-orange-50 rounded-lg">
+                            <div class="text-3xl mb-3">🤖</div>
+                            <h3 class="font-semibold text-slate-800 mb-2">AI/ML</h3>
+                            <p class="text-sm text-slate-600">Intelligent systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Experience</h2>
+                <div class="space-y-8">
+                    <!-- Moonberg AI -->
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-1">Senior Software Engineer</h3>
+                                <p class="text-lg text-blue-600 font-semibold">Moonberg AI</p>
+                            </div>
+                            <div class="text-slate-600 mt-2 md:mt-0">
+                                <div class="flex items-center mb-1">📍 Remote</div>
+                                <div class="flex items-center">📅 Nov 2023 - Present</div>
+                            </div>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start text-slate-600 leading-relaxed">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Spearheaded the design and optimization of advanced AI trading algorithms using Python, TensorFlow, and PyTorch, creating predictive models that adapt to market volatility and increased trading accuracy by 25%
+                            </li>
+                            <li class="flex items-start text-slate-600 leading-relaxed">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Architected scalable cloud-native microservices deployed on AWS (ECS, Lambda, DynamoDB, and S3) with Kubernetes and Docker, ensuring fault-tolerant infrastructure that scales seamlessly during global trading peaks
+                            </li>
+                            <li class="flex items-start text-slate-600 leading-relaxed">
+                                <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Built real-time event-driven pipelines using Apache Kafka, Redis, and PostgreSQL, enabling ultra-low latency data streaming and reducing average trade execution time from 120ms to 35ms
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Add other experience entries here... -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-6 bg-white">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Key Projects</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Distributed AI Trading Engine</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Built a high-frequency trading engine using Python, TensorFlow, and Kafka that executes trades with sub-50ms latency.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Python</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">TensorFlow</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Apache Kafka</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Redis</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">AWS</span>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <a href="mailto:mosesachi.me@gmail.com" class="p-2 text-slate-600 hover:text-blue-600 transition-colors">✉️</a>
-                            <a href="https://linkedin.com/in/mosesachi" target="_blank" class="p-2 text-slate-600 hover:text-blue-600 transition-colors">💼</a>
-                            <a href="https://github.com/mosesachizz" target="_blank" class="p-2 text-slate-600 hover:text-blue-600 transition-colors">💻</a>
+                            <a href="/projects/trading-engine" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                Live Demo 🔗
+                            </a>
+                            <a href="https://github.com/mosesachizz/trading-engine-demo" target="_blank" class="inline-flex items-center px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
+                                GitHub 💻
+                            </a>
                         </div>
                     </div>
-                </div>
-            </nav>
 
-            <!-- Hero Section -->
-            <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="mb-8">
-                        <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-                            MA
-                        </div>
-                        <h1 class="text-5xl md:text-6xl font-bold mb-4 text-center text-slate-800">Moses Achi</h1>
-                        <p class="text-xl md:text-2xl text-slate-600 mb-8">Senior Software Engineer</p>
-                        <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-                            Senior Software Engineer with 12+ years of experience designing resilient systems across fintech, AI trading, and enterprise SaaS. 
-                            Skilled at applying systems thinking to architect cloud-native platforms, optimize distributed pipelines, and integrate AI into mission-critical products.
+                    <div class="bg-slate-50 rounded-xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-shadow">
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Cloud-Native E-Learning SaaS</h3>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Architected a Kubernetes-based multi-tenant learning platform on GCP serving 100k+ users.
                         </p>
-                    </div>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="#projects" class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                            View My Work
-                        </a>
-                        <a href="#contact" class="px-8 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold">
-                            Get In Touch
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="py-20 px-6 bg-white">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">About Me</h2>
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <p class="text-lg text-slate-600 leading-relaxed mb-6">
-                                I'm a passionate software engineer who thrives on solving complex problems and building scalable solutions. 
-                                With over a decade of experience in the industry, I've had the privilege of working with cutting-edge technologies 
-                                and contributing to products that impact millions of users.
-                            </p>
-                            <p class="text-lg text-slate-600 leading-relaxed mb-6">
-                                My expertise spans across cloud architecture, AI/ML systems, and high-performance trading platforms. 
-                                I believe in writing clean, maintainable code and fostering collaborative engineering cultures that prioritize both innovation and reliability.
-                            </p>
-                            <div class="flex flex-wrap gap-4">
-                                <div class="flex items-center text-slate-600">
-                                    📍 Global Remote
-                                </div>
-                                <div class="flex items-center text-slate-600">
-                                    📅 12+ Years Experience
-                                </div>
-                                <div class="flex items-center text-slate-600">
-                                    🏆 AWS Certified
-                                </div>
-                            </div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">React</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Kubernetes</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">GCP</span>
                         </div>
-                        <div class="grid grid-cols-2 gap-6">
-                            <div class="text-center p-6 bg-blue-50 rounded-lg">
-                                <div class="text-3xl mb-3">💻</div>
-                                <h3 class="font-semibold text-slate-800 mb-2">Clean Code</h3>
-                                <p class="text-sm text-slate-600">Maintainable, scalable architecture</p>
-                            </div>
-                            <div class="text-center p-6 bg-green-50 rounded-lg">
-                                <div class="text-3xl mb-3">🗄️</div>
-                                <h3 class="font-semibold text-slate-800 mb-2">Data Systems</h3>
-                                <p class="text-sm text-slate-600">High-performance databases</p>
-                            </div>
-                            <div class="text-center p-6 bg-purple-50 rounded-lg">
-                                <div class="text-3xl mb-3">☁️</div>
-                                <h3 class="font-semibold text-slate-800 mb-2">Cloud Native</h3>
-                                <p class="text-sm text-slate-600">Modern infrastructure</p>
-                            </div>
-                            <div class="text-center p-6 bg-orange-50 rounded-lg">
-                                <div class="text-3xl mb-3">🤖</div>
-                                <h3 class="font-semibold text-slate-800 mb-2">AI/ML</h3>
-                                <p class="text-sm text-slate-600">Intelligent systems</p>
-                            </div>
+                        <div class="flex items-center space-x-4">
+                            <a href="/projects/elearning-saas" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                                Live Demo 🔗
+                            </a>
+                            <a href="https://github.com/mosesachizz/elearning-saas-demo" target="_blank" class="inline-flex items-center px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
+                                GitHub 💻
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Experience Section -->
-            <section id="experience" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Experience</h2>
-                    <div class="space-y-8">
-                        <!-- Moonberg AI -->
-                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-shadow">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-1">Senior Software Engineer</h3>
-                                    <p class="text-lg text-blue-600 font-semibold">Moonberg AI</p>
-                                </div>
-                                <div class="text-slate-600 mt-2 md:mt-0">
-                                    <div class="flex items-center mb-1">📍 Remote</div>
-                                    <div class="flex items-center">📅 Nov 2023 - Present</div>
-                                </div>
-                            </div>
-                            <ul class="space-y-3">
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Spearheaded the design and optimization of advanced AI trading algorithms using Python, TensorFlow, and PyTorch, creating predictive models that adapt to market volatility and increased trading accuracy by 25%
-                                </li>
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Architected scalable cloud-native microservices deployed on AWS (ECS, Lambda, DynamoDB, and S3) with Kubernetes and Docker, ensuring fault-tolerant infrastructure that scales seamlessly during global trading peaks
-                                </li>
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Built real-time event-driven pipelines using Apache Kafka, Redis, and PostgreSQL, enabling ultra-low latency data streaming and reducing average trade execution time from 120ms to 35ms
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Binance -->
-                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-shadow">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-1">Software Engineer</h3>
-                                    <p class="text-lg text-blue-600 font-semibold">Binance</p>
-                                </div>
-                                <div class="text-slate-600 mt-2 md:mt-0">
-                                    <div class="flex items-center mb-1">📍 Remote</div>
-                                    <div class="flex items-center">📅 Apr 2020 - Nov 2023</div>
-                                </div>
-                            </div>
-                            <ul class="space-y-3">
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Designed and developed high-throughput transaction engines using Java, Spring Boot, and PostgreSQL, enabling secure and scalable systems capable of handling billions in daily transactions
-                                </li>
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Integrated OAuth2.0, JWT authentication, Kubernetes RBAC policies to strengthen authentication and compliance
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Adobe -->
-                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-8 hover:shadow-md transition-shadow">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-1">Software Engineer</h3>
-                                    <p class="text-lg text-blue-600 font-semibold">Adobe Inc.</p>
-                                </div>
-                                <div class="text-slate-600 mt-2 md:mt-0">
-                                    <div class="flex items-center mb-1">📍 Singapore</div>
-                                    <div class="flex items-center">📅 May 2018 - Apr 2020</div>
-                                </div>
-                            </div>
-                            <ul class="space-y-3">
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Engineered enterprise-grade SaaS capabilities for the Creative Cloud ecosystem, leveraging React.js, Angular, Node.js, and REST APIs
-                                </li>
-                                <li class="flex items-start text-slate-600 leading-relaxed">
-                                    <span class="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                    Migrated legacy apps to microservices on Docker & Kubernetes, reducing release cycles from weeks to hours
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-800">Get In Touch</h2>
+                <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
+                    I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology. Feel free to reach out!
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="mailto:mosesachi.me@gmail.com" class="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                        ✉️ Send Email
+                    </a>
+                    <a href="https://linkedin.com/in/mosesachi" target="_blank" class="flex items-center px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold">
+                        💼 LinkedIn
+                    </a>
+                    <a href="https://github.com/mosesachizz" target="_blank" class="flex items-center px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold">
+                        💻 GitHub
+                    </a>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="py-20 px-6 bg-white">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Skills</h2>
-                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-slate-50 rounded-xl p-6">
-                            <h3 class="text-lg font-semibold text-slate-800 mb-4">Cloud & Infrastructure</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">AWS</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">GCP</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Azure</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Kubernetes</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Docker</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Terraform</span>
-                            </div>
-                        </div>
-                        <div class="bg-slate-50 rounded-xl p-6">
-                            <h3 class="text-lg font-semibold text-slate-800 mb-4">Backend Engineering</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Java</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Python</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Go</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Node.js</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Spring Boot</span>
-                            </div>
-                        </div>
-                        <div class="bg-slate-50 rounded-xl p-6">
-                            <h3 class="text-lg font-semibold text-slate-800 mb-4">Data & AI</h3>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">PostgreSQL</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">MongoDB</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">Redis</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">TensorFlow</span>
-                                <span class="px-3 py-1 bg-white text-slate-700 rounded-full text-sm font-medium border border-slate-200">PyTorch</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
-                <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Key Projects</h2>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
-                            <div class="p-8">
-                                <h3 class="text-xl font-bold text-slate-800 mb-3">Distributed AI Trading Engine</h3>
-                                <p class="text-slate-600 leading-relaxed mb-4">
-                                    Built a high-frequency trading engine using Python, TensorFlow, and Kafka that executes trades with sub-50ms latency, 
-                                    integrates adaptive risk models, and sustains millions of transactions daily with minimal downtime.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-6">
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Python</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">TensorFlow</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Apache Kafka</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Redis</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">AWS</span>
-                                </div>
-                                <div class="flex items-center space-x-4">
-                                    <a href="./trading-engine.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                                        Live Demo 🔗
-                                    </a>
-                                    <a href="https://github.com/mosesachizz/trading-engine-demo" target="_blank" class="inline-flex items-center px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
-                                        GitHub 💻
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
-                            <div class="p-8">
-                                <h3 class="text-xl font-bold text-slate-800 mb-3">Cloud-Native E-Learning SaaS</h3>
-                                <p class="text-slate-600 leading-relaxed mb-4">
-                                    Architected a Kubernetes-based multi-tenant learning platform on GCP serving 100k+ users, 
-                                    with autoscaling, PostgreSQL/Redis data management, and personalized analytics to significantly boost learner engagement.
-                                </p>
-                                <div class="flex flex-wrap gap-2 mb-6">
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">React</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Node.js</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">Kubernetes</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">PostgreSQL</span>
-                                    <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">GCP</span>
-                                </div>
-                                <div class="flex items-center space-x-4">
-                                    <a href="./elearning-saas.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                                        Live Demo 🔗
-                                    </a>
-                                    <a href="https://github.com/mosesachizz/elearning-saas-demo" target="_blank" class="inline-flex items-center px-4 py-2 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-medium">
-                                        GitHub 💻
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="py-20 px-6 bg-white">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-slate-800">Education</h2>
-                    <div class="space-y-6">
-                        <div class="bg-slate-50 rounded-xl p-8 border border-slate-200">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Master of Computer Science</h3>
-                                    <p class="text-lg text-blue-600 font-semibold">The University of Sydney</p>
-                                </div>
-                                <div class="text-slate-600 mt-2 md:mt-0">
-                                    <span class="font-semibold">2018</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-slate-50 rounded-xl p-8 border border-slate-200">
-                            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-                                <div>
-                                    <h3 class="text-xl font-bold text-slate-800 mb-2">Bachelor of Engineering in Computer Engineering</h3>
-                                    <p class="text-lg text-blue-600 font-semibold">National University of Singapore</p>
-                                    <p class="text-slate-600 mt-2">
-                                        <em>First Class Honours; Best Graduating Student, Department of Computer Science; CGPA: 4.96 / 5.00</em>
-                                    </p>
-                                </div>
-                                <div class="text-slate-600 mt-2 md:mt-0">
-                                    <span class="font-semibold">2016</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="py-20 px-6 bg-gradient-to-br from-slate-50 to-slate-100">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-slate-800">Get In Touch</h2>
-                    <p class="text-lg text-slate-600 mb-12 max-w-2xl mx-auto">
-                        I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology. Feel free to reach out!
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
-                        <a href="mailto:mosesachi.me@gmail.com" class="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                            ✉️ Send Email
-                        </a>
-                        <a href="https://linkedin.com/in/mosesachi" target="_blank" class="flex items-center px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold">
-                            💼 LinkedIn
-                        </a>
-                        <a href="https://github.com/mosesachizz" target="_blank" class="flex items-center px-6 py-3 border border-slate-300 text-slate-700 rounded-lg hover:bg-slate-50 transition-colors font-semibold">
-                            💻 GitHub
-                        </a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer -->
-            <footer class="bg-slate-800 text-white py-8 px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <div class="flex flex-col sm:flex-row items-center justify-between">
-                        <p class="text-slate-300 mb-4 sm:mb-0">
-                            © 2017-2025 Moses Achi. All rights reserved.
-                        </p>
-                        <p class="text-slate-400 text-sm">
-                            Built with passion for clean code and great user experiences
-                        </p>
-                    </div>
-                </div>
-            </footer>
-        </div>
+        <!-- Footer -->
+        <footer class="bg-slate-800 text-white py-8 px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-slate-300">© 2017-2025 Moses Achi. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
-
-    <!-- React version (will show when React loads) -->
-    <div id="root" class="loaded"></div>
-
-    <!-- React Scripts (optional enhancement) -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <script>
-        // Only try to load React if it's available
-        if (window.React && window.ReactDOM) {
-            try {
-                // Simple React version - you can enhance this later
-                function App() {
-                    return React.createElement('div', {
-                        className: 'text-center py-20'
-                    }, 'React Enhanced Version Loading...');
-                }
-                
-                ReactDOM.render(React.createElement(App), document.getElementById('root'));
-                document.body.classList.add('react-loaded');
-            } catch (error) {
-                console.log('React failed to load, using HTML fallback');
-            }
-        }
-    </script>
-
-    <!-- Smooth scrolling script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
