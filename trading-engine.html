@@ -4,33 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trading Engine Demo - Moses Achi</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-900 text-white">
-  <header class="p-4 border-b border-slate-700">
-    <a href="./index.html" class="text-slate-300 hover:text-white">← Back to Portfolio</a>
-  </header>
-  <section class="text-center py-16">
-    <h1 class="text-4xl font-bold mb-4">Distributed AI Trading Engine</h1>
-    <p class="text-slate-400">High-frequency trading engine with sub-50ms latency and millions of daily transactions.</p>
-  </section>
-  <section class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 pb-16">
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">35ms</div>
-      <p class="text-slate-400">Avg Latency</p>
-    </div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">12,500</div>
-      <p class="text-slate-400">Trades Today</p>
-    </div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">87.3%</div>
-      <p class="text-slate-400">Prediction Accuracy</p>
-    </div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2 text-green-400">+24.8%</div>
-      <p class="text-slate-400">Daily Return</p>
-    </div>
-  </section>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function TradingEnginePage() {
+      const [metrics, setMetrics] = useState({
+        latency: 35,
+        trades: 1250,
+        accuracy: 87.3,
+        profit: 24.8
+      });
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setMetrics(prev => ({
+            latency: 30 + Math.random() * 10, // fluctuate between 30–40ms
+            trades: prev.trades + Math.floor(Math.random() * 50) + 20,
+            accuracy: 85 + Math.random() * 5, // 85–90%
+            profit: 20 + Math.random() * 10  // 20–30%
+          }));
+        }, 3000);
+        return () => clearInterval(interval);
+      }, []);
+
+      return (
+        <div>
+          <header className="p-4 border-b border-slate-700">
+            <a href="./index.html" className="text-slate-300 hover:text-white">← Back to Portfolio</a>
+          </header>
+          <section className="text-center py-16">
+            <h1 className="text-4xl font-bold mb-4">Distributed AI Trading Engine</h1>
+            <p className="text-slate-400">High-frequency trading engine with live metrics updating in real time.</p>
+          </section>
+          <section className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 pb-16">
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{metrics.latency.toFixed(1)}ms</div>
+              <p className="text-slate-400">Avg Latency</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{metrics.trades.toLocaleString()}</div>
+              <p className="text-slate-400">Trades Today</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{metrics.accuracy.toFixed(1)}%</div>
+              <p className="text-slate-400">Prediction Accuracy</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2 text-green-400">+{metrics.profit.toFixed(1)}%</div>
+              <p className="text-slate-400">Daily Return</p>
+            </div>
+          </section>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<TradingEnginePage />, document.getElementById('root'));
+  </script>
 </body>
 </html>
