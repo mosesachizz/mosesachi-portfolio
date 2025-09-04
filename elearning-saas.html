@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning SaaS - Moses Achi</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        const { ArrowLeft, Users, BookOpen, TrendingUp, Award } = lucideReact;
+
+        function ELearningSaaSPage() {
+            const [stats, setStats] = useState({
+                activeUsers: 102847,
+                coursesCompleted: 28493,
+                avgEngagement: '94.2%',
+                satisfaction: '4.8/5'
+            });
+
+            useEffect(() => {
+                const interval = setInterval(() => {
+                    setStats(prev => ({
+                        ...prev,
+                        activeUsers: prev.activeUsers + Math.floor(Math.random() * 10) + 1,
+                        coursesCompleted: prev.coursesCompleted + Math.floor(Math.random() * 5) + 1
+                    }));
+                }, 3000);
+
+                return () => clearInterval(interval);
+            }, []);
+
+            return (
+                <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 text-slate-800">
+                    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+                        <div className="max-w-6xl mx-auto px-6 py-4">
+                            <a href="./index.html" className="flex items-center text-slate-600 hover:text-slate-800 transition-colors">
+                                <ArrowLeft size={20} className="mr-2" />
+                                Back to Portfolio
+                            </a>
+                        </div>
+                    </header>
+
+                    <section className="py-20 px-6 text-center">
+                        <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            Cloud-Native E-Learning SaaS
+                        </h1>
+                        <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                            Kubernetes-based multi-tenant learning platform serving 100k+ users with autoscaling and personalized analytics.
+                        </p>
+                    </section>
+
+                    <section className="py-12 px-6">
+                        <div className="max-w-6xl mx-auto">
+                            <h2 className="text-2xl font-bold mb-8 text-center text-slate-800">Platform Analytics Dashboard</h2>
+                            <div className="grid md:grid-cols-4 gap-6">
+                                <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+                                    <Users className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+                                    <div className="text-2xl font-bold text-slate-800 mb-1">{stats.activeUsers.toLocaleString()}</div>
+                                    <div className="text-slate-600 text-sm">Active Users</div>
+                                </div>
+                                <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+                                    <Award className="w-8 h-8 text-green-500 mx-auto mb-3" />
+                                    <div className="text-2xl font-bold text-slate-800 mb-1">{stats.coursesCompleted.toLocaleString()}</div>
+                                    <div className="text-slate-600 text-sm">Courses Completed</div>
+                                </div>
+                                <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+                                    <TrendingUp className="w-8 h-8 text-purple-500 mx-auto mb-3" />
+                                    <div className="text-2xl font-bold text-slate-800 mb-1">{stats.avgEngagement}</div>
+                                    <div className="text-slate-600 text-sm">Avg Engagement</div>
+                                </div>
+                                <div className="bg-white border border-slate-200 rounded-xl p-6 text-center shadow-sm">
+                                    <BookOpen className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
+                                    <div className="text-2xl font-bold text-slate-800 mb-1">{stats.satisfaction}</div>
+                                    <div className="text-slate-600 text-sm">User Satisfaction</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<ELearningSaaSPage />, document.getElementById('root'));
+    </script>
+</body>
+</html>
