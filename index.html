@@ -5,56 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moses Achi - Senior Software Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body class="bg-slate-50 text-slate-800">
-  <div class="min-h-screen">
-    <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white border-b border-slate-200 z-50">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="font-bold text-xl">Moses Achi</div>
-        <div class="space-x-6 hidden md:flex">
-          <a href="#about" class="hover:text-blue-600">About</a>
-          <a href="#experience" class="hover:text-blue-600">Experience</a>
-          <a href="#skills" class="hover:text-blue-600">Skills</a>
-          <a href="#projects" class="hover:text-blue-600">Projects</a>
-          <a href="#contact" class="hover:text-blue-600">Contact</a>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 bg-white border-b border-slate-200 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="font-bold text-xl">Moses Achi</div>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#experience" class="hover:text-blue-600">Experience</a>
+        <a href="#skills" class="hover:text-blue-600">Skills</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center justify-center pt-20">
+    <div class="text-center">
+      <h1 class="text-5xl font-bold mb-4">Moses Achi</h1>
+      <p class="text-xl text-slate-600">Senior Software Engineer</p>
+      <p class="mt-4 text-slate-600 max-w-xl mx-auto">
+        Senior Software Engineer with 12+ years of experience designing resilient systems in fintech, AI trading, and SaaS.
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+      <p class="text-lg text-slate-600 leading-relaxed text-center">
+        Passionate about solving complex problems and building scalable solutions. Experienced in cloud architecture,
+        AI/ML systems, and trading platforms. Advocate of clean code and collaborative engineering.
+      </p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-20 px-6 bg-slate-100">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6 text-center">Experience</h2>
+      <div class="space-y-6">
+        <div class="p-6 bg-white rounded-lg shadow">
+          <h3 class="text-xl font-bold">Senior Software Engineer - Moonberg AI</h3>
+          <p class="text-slate-600">Nov 2023 - Present | Remote</p>
+          <p class="mt-2 text-slate-600">Led development of AI trading algorithms, cloud microservices, and low-latency pipelines.</p>
+        </div>
+        <!-- Add more experience entries if needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Skills</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded">Python</span>
+        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded">React</span>
+        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded">AWS</span>
+        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded">Kubernetes</span>
+        <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded">PostgreSQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 bg-slate-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Key Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Trading Engine -->
+        <div class="p-8 border rounded-xl shadow hover:shadow-lg">
+          <h3 class="text-xl font-bold mb-3">Distributed AI Trading Engine</h3>
+          <p class="text-slate-600 mb-4">High-frequency trading engine demo with live metrics.</p>
+          <a href="trading-engine.html" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Live Demo</a>
+        </div>
+        <!-- E-learning SaaS -->
+        <div class="p-8 border rounded-xl shadow hover:shadow-lg">
+          <h3 class="text-xl font-bold mb-3">Cloud-Native E-Learning SaaS</h3>
+          <p class="text-slate-600 mb-4">Multi-tenant course platform demo with student analytics.</p>
+          <a href="elearning-saas.html" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Live Demo</a>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- Hero -->
-    <section class="min-h-screen flex items-center justify-center pt-20">
-      <div class="text-center">
-        <h1 class="text-5xl font-bold mb-4">Moses Achi</h1>
-        <p class="text-xl text-slate-600">Senior Software Engineer</p>
-      </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="py-20 px-6 bg-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
+      <p class="text-lg text-slate-600 mb-6">Reach out for collaborations or opportunities.</p>
+      <a href="mailto:mosesachi.me@gmail.com" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">✉️ Send Email</a>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-20 px-6 bg-white">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-center mb-12">Key Projects</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Trading Engine -->
-          <div class="p-8 border rounded-xl shadow hover:shadow-lg">
-            <h3 class="text-xl font-bold mb-3">Distributed AI Trading Engine</h3>
-            <p class="text-slate-600 mb-4">High-frequency trading engine demo with live metrics.</p>
-            <a href="trading-engine.html" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Live Demo</a>
-          </div>
-          <!-- E-learning SaaS -->
-          <div class="p-8 border rounded-xl shadow hover:shadow-lg">
-            <h3 class="text-xl font-bold mb-3">Cloud-Native E-Learning SaaS</h3>
-            <p class="text-slate-600 mb-4">Multi-tenant course platform demo with student analytics.</p>
-            <a href="elearning-saas.html" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Live Demo</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-800 text-white py-6 text-center">
-      © 2025 Moses Achi — All rights reserved.
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer class="bg-slate-800 text-white py-6 text-center">
+    © 2025 Moses Achi — All rights reserved.
+  </footer>
 </body>
 </html>
