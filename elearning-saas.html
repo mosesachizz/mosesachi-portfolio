@@ -4,33 +4,68 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Learning SaaS Demo - Moses Achi</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-900 text-white">
-  <header class="p-4 border-b border-slate-700">
-    <a href="./index.html" class="text-slate-300 hover:text-white">← Back to Portfolio</a>
-  </header>
-  <section class="text-center py-16">
-    <h1 class="text-4xl font-bold mb-4">Cloud-Native E-Learning SaaS</h1>
-    <p class="text-slate-400">Scalable learning platform with real-time analytics and multi-tenant support.</p>
-  </section>
-  <section class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 pb-16">
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">120</div>
-      <p class="text-slate-400">Courses Delivered</p>
-    </div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">4,850</div>
-      <p class="text-slate-400">Active Students</p>
-    </div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">78%</div>
-      <p class="text-slate-400">Completion Rate</p>
-    </div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">
-      <div class="text-2xl mb-2">42m</div>
-      <p class="text-slate-400">Avg Session Time</p>
-    </div>
-  </section>
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    function ElearningPage() {
+      const [stats, setStats] = useState({
+        courses: 120,
+        students: 4850,
+        completion: 78,
+        session: 42
+      });
+
+      useEffect(() => {
+        const interval = setInterval(() => {
+          setStats(prev => ({
+            courses: prev.courses,
+            students: prev.students + Math.floor(Math.random() * 15) + 5,
+            completion: 75 + Math.random() * 5, // 75–80%
+            session: 40 + Math.random() * 5    // 40–45 min
+          }));
+        }, 3000);
+        return () => clearInterval(interval);
+      }, []);
+
+      return (
+        <div>
+          <header className="p-4 border-b border-slate-700">
+            <a href="./index.html" className="text-slate-300 hover:text-white">← Back to Portfolio</a>
+          </header>
+          <section className="text-center py-16">
+            <h1 className="text-4xl font-bold mb-4">Cloud-Native E-Learning SaaS</h1>
+            <p className="text-slate-400">Scalable learning platform demo with real-time analytics updating live.</p>
+          </section>
+          <section className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 pb-16">
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{stats.courses}</div>
+              <p className="text-slate-400">Courses Delivered</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{stats.students.toLocaleString()}</div>
+              <p className="text-slate-400">Active Students</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{stats.completion.toFixed(1)}%</div>
+              <p className="text-slate-400">Completion Rate</p>
+            </div>
+            <div className="bg-slate-800 p-6 rounded-xl text-center">
+              <div className="text-2xl mb-2">{stats.session.toFixed(1)}m</div>
+              <p className="text-slate-400">Avg Session Time</p>
+            </div>
+          </section>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<ElearningPage />, document.getElementById('root'));
+  </script>
 </body>
 </html>
