@@ -4,74 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Learning SaaS Demo - Moses Achi</title>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/lucide-react@latest/dist/umd/lucide-react.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-900 text-white">
-  <div id="root"></div>
-  <script type="text/babel">
-    const { useState, useEffect } = React;
-    const { ArrowLeft, BookOpen, Users, CheckCircle, Timer } = lucideReact;
-
-    function ElearningPage() {
-      const [stats, setStats] = useState({
-        courses: 120,
-        students: 4850,
-        completion: "78%",
-        session: "42m"
-      });
-
-      useEffect(() => {
-        const interval = setInterval(() => {
-          setStats(prev => ({
-            ...prev,
-            students: prev.students + Math.floor(Math.random() * 20)
-          }));
-        }, 3000);
-        return () => clearInterval(interval);
-      }, []);
-
-      return (
-        <div>
-          <header className="p-4 border-b border-slate-700">
-            <a href="./index.html" className="flex items-center text-slate-300 hover:text-white">
-              <ArrowLeft className="mr-2" /> Back to Portfolio
-            </a>
-          </header>
-          <section className="text-center py-16">
-            <h1 className="text-5xl font-bold mb-4">Cloud-Native E-Learning SaaS</h1>
-            <p className="text-slate-400">Scalable learning platform with real-time analytics and multi-tenant support.</p>
-          </section>
-          <section className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 pb-16">
-            <div className="bg-slate-800 p-6 rounded-xl text-center">
-              <BookOpen className="mx-auto mb-2 text-blue-400" />
-              <div className="text-2xl">{stats.courses}</div>
-              <p className="text-slate-400">Courses Delivered</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded-xl text-center">
-              <Users className="mx-auto mb-2 text-green-400" />
-              <div className="text-2xl">{stats.students.toLocaleString()}</div>
-              <p className="text-slate-400">Active Students</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded-xl text-center">
-              <CheckCircle className="mx-auto mb-2 text-yellow-400" />
-              <div className="text-2xl">{stats.completion}</div>
-              <p className="text-slate-400">Completion Rate</p>
-            </div>
-            <div className="bg-slate-800 p-6 rounded-xl text-center">
-              <Timer className="mx-auto mb-2 text-purple-400" />
-              <div className="text-2xl">{stats.session}</div>
-              <p className="text-slate-400">Avg Session Time</p>
-            </div>
-          </section>
-        </div>
-      );
-    }
-
-    ReactDOM.render(<ElearningPage />, document.getElementById('root'));
-  </script>
+  <header class="p-4 border-b border-slate-700">
+    <a href="./index.html" class="text-slate-300 hover:text-white">← Back to Portfolio</a>
+  </header>
+  <section class="text-center py-16">
+    <h1 class="text-4xl font-bold mb-4">Cloud-Native E-Learning SaaS</h1>
+    <p class="text-slate-400">Scalable learning platform with real-time analytics and multi-tenant support.</p>
+  </section>
+  <section class="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto px-6 pb-16">
+    <div class="bg-slate-800 p-6 rounded-xl text-center">
+      <div class="text-2xl mb-2">120</div>
+      <p class="text-slate-400">Courses Delivered</p>
+    </div>
+    <div class="bg-slate-800 p-6 rounded-xl text-center">
+      <div class="text-2xl mb-2">4,850</div>
+      <p class="text-slate-400">Active Students</p>
+    </div>
+    <div class="bg-slate-800 p-6 rounded-xl text-center">
+      <div class="text-2xl mb-2">78%</div>
+      <p class="text-slate-400">Completion Rate</p>
+    </div>
+    <div class="bg-slate-800 p-6 rounded-xl text-center">
+      <div class="text-2xl mb-2">42m</div>
+      <p class="text-slate-400">Avg Session Time</p>
+    </div>
+  </section>
 </body>
 </html>
